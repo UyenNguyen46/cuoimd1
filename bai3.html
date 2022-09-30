@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(str1, str2) {
+        let flag = false
+        let count = 0
+        for (let i = 0; i < str2.length; i++) {
+            for (let j = 0; j < str1.length; j++) {
+                if (str1[j] === str2[i]) {
+                    count++
+                }
+            }
+        }
+        if(count == str1.length){
+            flag = true
+        }
+        return "str 1 nằm trong str2: " + flag
+    }
+
+    let str1 = "cod"
+    let str2 = "codegym"
+    console.log(check(str1, str2))
+</script>
+</body>
+</html>

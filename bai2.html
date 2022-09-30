@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, index) {
+        let res = []
+        if (index < 0 || index > arr.length) {
+            res = arr;
+            return res;
+        } else {
+            for (let i = 0; i < index; i++) {
+                res[i] = arr[i];
+            }
+            for (let i = index + 1; i < arr.length; i++) {
+                res[i] = arr[i];
+            }
+        }
+        return res;
+    }
+
+    let firstarr = [1, 2, 4, 5, 8, 0];
+    let index = 3;
+    console.log(tryRemoveFromArray(firstarr, index))
+</script>
+</body>
+</html>
